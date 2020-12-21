@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    <h1>Dashboard</h1>
+    <p>Welcom to your dashboard,{{ request.user.username }}.{{ request.user.id }}</p>
+    <p>You can <a href="{% url 'account:edit' %}">edit</a>your profile here.</p>
+{% endblock %}
